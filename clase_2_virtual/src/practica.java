@@ -143,6 +143,11 @@ public class practica extends javax.swing.JFrame {
         jLabel7.setText("Type a number:");
 
         num.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        num.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformed(evt);
+            }
+        });
         num.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 numKeyTyped(evt);
@@ -500,6 +505,10 @@ public class practica extends javax.swing.JFrame {
     private void nombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreKeyReleased
      show.setEnabled(nombre.getText().length() != 0);
     }//GEN-LAST:event_nombreKeyReleased
+
+    private void numActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numActionPerformed
     
     /**
      * @param args the command line arguments
