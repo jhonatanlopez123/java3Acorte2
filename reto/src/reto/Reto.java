@@ -12,13 +12,11 @@ import java.util.Scanner;
  * @author jhonatan
  */
 public class Reto {
-
-    /**
+     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         int x = 0;
-        
         Scanner l = new Scanner(System.in);
        System.out.println("digite la cantidad de numeros: ");
        int a = l.nextInt();
@@ -38,6 +36,5 @@ public class Reto {
                 }
             }
        }
-    }
-    
+    }   
 }

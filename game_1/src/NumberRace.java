@@ -267,18 +267,18 @@ public class NumberRace extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mesaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(about_of)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(en)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(es)
-                        .addGap(23, 23, 23))
+                        .addGap(12, 12, 12))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mesaLayout.createSequentialGroup()
                         .addComponent(scores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 4, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, mesaLayout.createSequentialGroup()
                         .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(mesaLayout.createSequentialGroup()
@@ -291,7 +291,7 @@ public class NumberRace extends javax.swing.JFrame {
                                 .addComponent(try_again)
                                 .addGap(20, 20, 20)))
                         .addComponent(pairs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         mesaLayout.setVerticalGroup(
             mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,11 +300,12 @@ public class NumberRace extends javax.swing.JFrame {
                     .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(mesaLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(about_of)
-                            .addComponent(en)
-                            .addComponent(es)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(en)
+                                .addComponent(es)))))
                 .addGroup(mesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mesaLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -339,9 +340,8 @@ public class NumberRace extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -358,13 +358,11 @@ public class NumberRace extends javax.swing.JFrame {
    return retValue;
 }
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
-
+       
         Random D = new Random();
-        int i = box.getSelectedIndex();
-//        player_2.setText(arrayj[i]);
-//        System.out.println(arrayj[i]);
+//        int x = box.getSelectedIndex();
         int d1 = 0, d2 = 0;
-        d1 = (int)(D.nextDouble()* 3 + 1);
+        d1 = (int)(D.nextDouble()* 6 + 1);
         d2 = (int)(D.nextDouble()* 6 + 1);
         int sum = d1 + d2;
         String c = Integer.toString(sum);
@@ -414,7 +412,6 @@ public class NumberRace extends javax.swing.JFrame {
             default:
                 break;
     }
-     
     }//GEN-LAST:event_playActionPerformed
 
     private void try_againActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_try_againActionPerformed
