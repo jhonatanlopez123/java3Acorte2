@@ -34,69 +34,71 @@ public class about_of extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
+        b1 = new javax.swing.JButton();
+        en = new javax.swing.JButton();
+        es = new javax.swing.JButton();
+        l2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        l3 = new javax.swing.JLabel();
+        l4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        l5 = new javax.swing.JLabel();
+        l6 = new javax.swing.JLabel();
+        l7 = new javax.swing.JLabel();
+        l8 = new javax.swing.JLabel();
+        l9 = new javax.swing.JLabel();
+        l10 = new javax.swing.JLabel();
 
         jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("about of...");
         setIconImage(getIconImage());
 
-        jLabel1.setText("CREADOR:");
+        l1.setText("CREATOR:");
 
-        jButton1.setText("salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        b1.setText("exit");
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("EN");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        en.setText("EN");
+        en.setEnabled(false);
+        en.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                enActionPerformed(evt);
             }
         });
 
-        jButton3.setText("ES");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        es.setText("ES");
+        es.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                esActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("INSTRUCCIONES:");
+        l2.setText("INSTRUCTIONS:");
 
         jLabel3.setText("Jhonatan E. Villareal L.");
 
-        jLabel4.setText("Carrera numerica se juega de las sig. forma, primero se escoje la cantidad de");
+        l3.setText("Numerical race is played from the following. Form, first choose the amount of");
 
-        jLabel5.setText(" jugadores,despues se escoje el nivel basico,intermedio o experto.");
+        l4.setText("players, then choose the basic, intermediate or expert level.");
 
-        jLabel8.setText("se juega por turnos, al jugador que le toca tiene que tirar los dados, el numero");
+        l5.setText("It is played in turns, the player who plays it has to roll the dice, the number");
 
-        jLabel9.setText("resultante se le sumara a sus puntos corespondientes, si se pasa de lo escogido");
+        l6.setText("result will be added to its corresponding points, if it goes beyond the chosen");
 
-        jLabel10.setText("anterior mente(nivel) ese tiro no tendra valides,si dos jugadores se (chocan)");
+        l7.setText("Previously (level) that shot will have no validity, if two players (collide)");
 
-        jLabel11.setText("el jugador del trno actual tonara ese lugar mientras que el otro regrezara desde ");
+        l8.setText("the player of the current turn will knock that place while the other will return from");
 
-        jLabel12.setText("cero, si un jugador tiene tres pares consecutivos este ganara automaticamente");
+        l9.setText("zero, if a player has three consecutive pairs he will automatically win");
 
-        jLabel13.setText("si un jugador saca un par de unos este obtendra 21 puntos mas. buena suerte.");
+        l10.setText("if a player draws a pair of one he will get 21 more points. Good luck.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,98 +107,129 @@ public class about_of extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(l3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(l4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(46, 46, 46)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 20, Short.MAX_VALUE))
+                                .addGap(55, 55, 55))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(l1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
+                                .addComponent(en)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                                .addComponent(es)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(l10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(l9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(l8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(l7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(l6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(l5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 18, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(l2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addComponent(b1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
+                        .addContainerGap(19, Short.MAX_VALUE)
+                        .addComponent(l1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)
-                        .addGap(13, 13, 13))
+                        .addGap(13, 13, 13)
+                        .addComponent(l2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3))
+                            .addComponent(en)
+                            .addComponent(es))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jLabel2)
+                .addComponent(l3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(l4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(l5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(l6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(l7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addComponent(l8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
+                .addComponent(l9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(l10)
+                .addGap(18, 18, 18)
+                .addComponent(b1)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         dispose(); 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void enActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enActionPerformed
+        
+        l1.setText("CREATOR:");
+        l2.setText("INSTRUCTIONS:");
+        l3.setText("Numerical race is played from the following. Form, first choose the amount of");
+        l4.setText("players, then choose the basic, intermediate or expert level.");
+        l5.setText("It is played in turns, the player who plays it has to roll the dice, the number");
+        l6.setText("result will be added to its corresponding points, if it goes beyond the chosen");
+        l7.setText("Previously (level) that shot will have no validity, if two players (collide)");
+        l8.setText("the player of the current turn will knock that place while the other will return from");  
+        l9.setText("zero, if a player has three consecutive pairs he will automatically win");
+        l10.setText("if a player draws a pair of one he will get 21 more points. Good luck.");   
+        b1.setText("exit");
+        this.setTitle("about of...");
+        es.setEnabled(true);
+        en.setEnabled(false);
+    }//GEN-LAST:event_enActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esActionPerformed
+        
+        l1.setText("CREADOR:");
+        l2.setText("INSTRUCCIONES:");
+        l3.setText("Carrera numérica se juega de las sig. Forma, primero se escoge la cantidad de ");
+        l4.setText("jugadores, despues se escoge el nivel basico, intermedio o experto.");
+        l5.setText("Se juega por turnos, al jugador que le toca tiene que tirar los dados, el numero ");
+        l6.setText("resultante se le sumara a sus puntos correspondientes, si se pasa de lo escogido");
+        l7.setText("anterior mente(nivel) ese tiro no tendrá valides, si dos jugadores se (chocan)");
+        l8.setText("el jugador del turno actual tonara ese lugar mientras que el otro regresara desde");  
+        l9.setText("cero, si un jugador tiene tres pares consecutivos este ganara automaticamente ");
+        l10.setText("si un jugador saca un par de uno este obtendrá 21 puntos mas. Buena suerte.");   
+        b1.setText("salir");       
+        this.setTitle("acerca de ...");        
+        en.setEnabled(true);
+        es.setEnabled(false);
+    }//GEN-LAST:event_esActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public Image getIconImage() {
          Image retValue = Toolkit.getDefaultToolkit().
-         getImage(ClassLoader.getSystemResource("images/tuerca.png"));
+         getImage(ClassLoader.getSystemResource("icons/car.png"));
          return retValue;
         }
     public static void main(String args[]) {
@@ -232,21 +265,21 @@ public class about_of extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton b1;
+    private javax.swing.JButton en;
+    private javax.swing.JButton es;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel l1;
+    private javax.swing.JLabel l10;
+    private javax.swing.JLabel l2;
+    private javax.swing.JLabel l3;
+    private javax.swing.JLabel l4;
+    private javax.swing.JLabel l5;
+    private javax.swing.JLabel l6;
+    private javax.swing.JLabel l7;
+    private javax.swing.JLabel l8;
+    private javax.swing.JLabel l9;
     // End of variables declaration//GEN-END:variables
 }

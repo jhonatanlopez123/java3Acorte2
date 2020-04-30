@@ -81,7 +81,7 @@ public class NumberRace extends javax.swing.JFrame {
         player_2 = new javax.swing.JLabel();
         point_2 = new javax.swing.JLabel();
         missing_2 = new javax.swing.JLabel();
-        returs = new javax.swing.JLabel();
+        returns = new javax.swing.JLabel();
         returns_2 = new javax.swing.JLabel();
         pairs = new javax.swing.JPanel();
         pairs_2 = new javax.swing.JLabel();
@@ -191,7 +191,7 @@ public class NumberRace extends javax.swing.JFrame {
         scores.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Scores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         player.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        player.setText("retun player:");
+        player.setText("turn player:");
 
         points.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         points.setText("advanced positions:");
@@ -208,8 +208,8 @@ public class NumberRace extends javax.swing.JFrame {
         missing_2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         missing_2.setText("#");
 
-        returs.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        returs.setText("returns:");
+        returns.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        returns.setText("returns:");
 
         returns_2.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         returns_2.setText("#");
@@ -224,7 +224,7 @@ public class NumberRace extends javax.swing.JFrame {
                     .addComponent(points)
                     .addComponent(player)
                     .addComponent(missing)
-                    .addComponent(returs))
+                    .addComponent(returns))
                 .addGap(49, 49, 49)
                 .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(player_2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,7 +251,7 @@ public class NumberRace extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(returns_2)
-                    .addComponent(returs))
+                    .addComponent(returns))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -414,9 +414,7 @@ public class NumberRace extends javax.swing.JFrame {
          return retValue;
 }
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
-
     
-        
     String can2 = jugadores.getSelectedItem().toString();
     int can = Integer.parseInt(can2);
     int g=0,winner=0;
@@ -433,32 +431,25 @@ public class NumberRace extends javax.swing.JFrame {
     String j = Integer.toString(jugador[i]);
     player_2.setText(j);
     int sum[]=new int [can];
-    if(niv == "basic[50]"){
+    if(niv == "basic[50]"||niv == "basico[50]"){
         nivel=50;
         System.out.println("basico");
-    }else if (niv == "intermediate[100]"){
+    }else if (niv == "intermediate[100]"||niv == "intermedio[100]"){
         nivel=100;
-        System.out.println("medium");
-    }else if (niv == "advanced[200]"){
+        System.out.println("intermedio");
+    }else if (niv == "advanced[200]"||niv == "avanzado[200]"){
         nivel=200;
-        System.out.println("experto");
+        System.out.println("avanzado");
     }
-    
     Random D = new Random();
     int d1 = 0,d2 = 0;
     d1 = (int)(D.nextDouble()* 6 + 1);
-    d2 = (int)(D.nextDouble()* 6 + 1);
-
-    
+    d2 = (int)(D.nextDouble()* 6 + 1);   
     dd2[i2] = Integer.toString(d2);
-    System.out.println("numero: "+i2);
-    System.out.println("this "+d2);
-
-
-    for (int t=0;t<=i2;t++){  
-        System.out.println(dd2[t]);
-        g++;  
-    }
+//    for (int t=0;t<=i2;t++){  
+//        System.out.println(dd2[t]);
+//        g++;  
+//    }
     if(d1==d2){
     i2++;
     if(i2>=3){
@@ -477,21 +468,13 @@ public class NumberRace extends javax.swing.JFrame {
         sum[i]=21;
         c="21";
     }
-
     if (counter[i]>=nivel-6 && counter[i]<nivel){
         d1=0;
         sum[i]=d2;
         c=c3; 
- 
     }
-    
-
     suma.setText(c);
- //points   
- //missing 
     counter[i] = counter[i] + sum[i];
-//returns
-    
     if (counter[i] == nivel || counter2[i] == 3 || winner==1){
         System.out.println("--------------------------------------------------------------------");
         System.out.println("el ganador es: "+jugador[i]);
@@ -506,29 +489,7 @@ public class NumberRace extends javax.swing.JFrame {
             ganador.par2_2.setText(dd2[1]);           
             ganador.par3_1.setText(dd2[2]);
             ganador.par3_2.setText(dd2[2]);
-        }else if(i2==1){
-            ganador.par1_1.setText(dd2[0]);
-            ganador.par1_2.setText(dd2[0]);
-            ganador.par2_1.setText(dd2[1]);
-            ganador.par2_2.setText(dd2[1]);
-            ganador.par3_1.setText("#");
-            ganador.par3_2.setText("#");
-        }else if(i2==0){
-            ganador.par1_1.setText(dd2[0]);
-            ganador.par1_2.setText(dd2[0]);
-            ganador.par2_1.setText("#");
-            ganador.par2_2.setText("#");
-            ganador.par3_1.setText("#");
-            ganador.par3_2.setText("#");            
-            
-        }else if (i2<2){
-            ganador.par1_1.setText("#");
-            ganador.par1_2.setText("#");
-            ganador.par2_1.setText("#");
-            ganador.par2_2.setText("#");           
-            ganador.par3_1.setText("#");
-            ganador.par3_2.setText("#");         
-        }   
+        } 
         ganador.setVisible(true);
          String can3 = jugadores.getSelectedItem().toString();
          int can4 = Integer.parseInt(can2); 
@@ -540,27 +501,20 @@ public class NumberRace extends javax.swing.JFrame {
      if(can>=2){
         if (i == 0){
             for (int i2=i+1;i2<=can;i2++){
-//                System.out.println(i + " "+i2);
                 if(counter[i]==counter[i2]){
-//                    System.out.println("aqui");
                     counter[i2]=0;
                     counter4[i2] = counter4[i2] + 1;
                 }
             }
-//            System.out.println(0+" "+0);
         }else if(i>=1){
             for (int i2=i-1;i2>=0;i2--){
-//                System.out.println(i + " "+i2);
                 if(counter[i]==counter[i2]){
-//                    System.out.println("aqui");
                     counter[i2]=0;
                     counter4[i2] = counter4[i2] + 1;
                 }
             }
             for (int i2=i+1;i2<=can;i2++){
-//                System.out.println(i + " "+i2);
                 if(counter[i]==counter[i2]){
-//                    System.out.println("aqui");
                     counter[i2]=0;
                 }
             }
@@ -607,25 +561,15 @@ public class NumberRace extends javax.swing.JFrame {
     }else if (d1 != d2 && counter2[i]==2 || d1 != d2 && counter2[i]==1){
         counter2[i]=0;
         pairs_2.setText(Integer.toString(counter2[i]));
-//        System.out.println("borar");
     }
-
-
-   // counter[i] = counter[i] + sum[i];
     for (int t=0;t<=can-1;t++){   
         System.out.println("points: "+counter[t]+" pairs: "+counter2[t]+" missing: "+counter3[t]+" returns: "+counter4[t]+" player: "+jugador[t]);       
     }   
     System.out.println("--------------------------------------------------------------------");    
-
- 
-
-     
-      
-     
     i++;
     
     if (i == can){
-       i = 0;
+        i = 0;
     }
     switch(d1){
             case 0:
@@ -692,6 +636,7 @@ public class NumberRace extends javax.swing.JFrame {
     }//GEN-LAST:event_try_againActionPerformed
 
     private void esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esActionPerformed
+    
         en.setEnabled(true);
         es.setEnabled(false);
         title.setText("carrera numerica");
@@ -700,18 +645,23 @@ public class NumberRace extends javax.swing.JFrame {
         play_2.setText("empezar juego");
         try_again.setText("Inténtalo de nuevo");
         dices.setBorder(javax.swing.BorderFactory.createTitledBorder("DADOS"));
-        player.setText("jugador:");
-        missing.setText("desaparecido:");
-        points.setText("puntos:");
+        player.setText("jugador de turno:");
+        missing.setText("posiciones faltantes:");
+        points.setText("posiciones avanzadas:");
         level.setText("nivel");
         about_of.setText("acerca de...");
+        returns.setText("devoluciones:");
         pairs.setBorder(javax.swing.BorderFactory.createTitledBorder("pares"));
         scores.setBorder(javax.swing.BorderFactory.createTitledBorder("Puntuaciones"));
         this.setTitle("carrera numerica");
-
+        niveles.removeAllItems();
+        niveles.addItem("basico[50]");
+        niveles.addItem("intermedio[100]");
+        niveles.addItem("avanzado[200]");
     }//GEN-LAST:event_esActionPerformed
 
     private void enActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enActionPerformed
+        
         es.setEnabled(true);
         en.setEnabled(false);
         title.setText("number race");
@@ -722,13 +672,17 @@ public class NumberRace extends javax.swing.JFrame {
         play_2.setText("start game");
         try_again.setText("try again");
         dices.setBorder(javax.swing.BorderFactory.createTitledBorder("DICES"));
-        player.setText("player:");
-        missing.setText("missing:");
-        points.setText("points:");
+        player.setText("turn player:");
+        missing.setText("missing positions:");
+        points.setText("advanced positions:");
+        returns.setText("returns:");
         pairs.setBorder(javax.swing.BorderFactory.createTitledBorder("pairs"));
         scores.setBorder(javax.swing.BorderFactory.createTitledBorder("Scores"));
         this.setTitle("number race");
-
+        niveles.removeAllItems();
+        niveles.addItem("basic[50]");
+        niveles.addItem("intermediate[100]");
+        niveles.addItem("advanced[200]");
     }//GEN-LAST:event_enActionPerformed
    
     private void play_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play_2ActionPerformed
@@ -786,8 +740,8 @@ public class NumberRace extends javax.swing.JFrame {
     private javax.swing.JLabel player_2;
     private javax.swing.JLabel point_2;
     private javax.swing.JLabel points;
+    private javax.swing.JLabel returns;
     private javax.swing.JLabel returns_2;
-    private javax.swing.JLabel returs;
     private javax.swing.JPanel scores;
     private javax.swing.JLabel suma;
     private javax.swing.JLabel title;

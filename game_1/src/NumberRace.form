@@ -359,7 +359,7 @@
                           <Component id="points" min="-2" max="-2" attributes="0"/>
                           <Component id="player" min="-2" max="-2" attributes="0"/>
                           <Component id="missing" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="returs" min="-2" max="-2" attributes="0"/>
+                          <Component id="returns" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -393,7 +393,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="returns_2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="returs" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="returns" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
@@ -406,7 +406,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Black" size="11" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="retun player:"/>
+                <Property name="text" type="java.lang.String" value="turn player:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="points">
@@ -449,7 +449,7 @@
                 <Property name="text" type="java.lang.String" value="#"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="returs">
+            <Component class="javax.swing.JLabel" name="returns">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial Black" size="11" style="1"/>

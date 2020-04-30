@@ -35,55 +35,55 @@ public class ganador extends javax.swing.JFrame {
     private void initComponents() {
 
         ganador = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
         gana = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        play_3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        sonido = new javax.swing.JToggleButton();
+        b1 = new javax.swing.JButton();
+        b2 = new javax.swing.JButton();
+        b3 = new javax.swing.JToggleButton();
         par1_1 = new javax.swing.JLabel();
         par2_1 = new javax.swing.JLabel();
         par2_2 = new javax.swing.JLabel();
         par1_2 = new javax.swing.JLabel();
         par3_1 = new javax.swing.JLabel();
         par3_2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        l2 = new javax.swing.JLabel();
         en = new javax.swing.JButton();
         es = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        l5 = new javax.swing.JLabel();
+        l4 = new javax.swing.JLabel();
+        l3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ganador");
+        setTitle("winner");
         setIconImage(getIconImage());
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
-        jLabel1.setText("el ganador es el jugador: ");
+        l1.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        l1.setText("the winner is the player:");
 
         gana.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         gana.setText("#");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/winer.gif"))); // NOI18N
 
-        play_3.setText("play again");
-        play_3.addActionListener(new java.awt.event.ActionListener() {
+        b1.setText("play again");
+        b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                play_3ActionPerformed(evt);
+                b1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("exit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        b2.setText("exit");
+        b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                b2ActionPerformed(evt);
             }
         });
 
-        sonido.setText("sonido");
-        sonido.addActionListener(new java.awt.event.ActionListener() {
+        b3.setText("sound");
+        b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sonidoActionPerformed(evt);
+                b3ActionPerformed(evt);
             }
         });
 
@@ -99,7 +99,7 @@ public class ganador extends javax.swing.JFrame {
 
         par3_2.setText("#");
 
-        jLabel3.setText("pares consecutivos:");
+        l2.setText("consecutive pairs:");
 
         en.setText("EN");
         en.setEnabled(false);
@@ -116,11 +116,11 @@ public class ganador extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("ultimo");
+        l5.setText("latest");
 
-        jLabel5.setText("penultimo");
+        l4.setText("penultimate");
 
-        jLabel6.setText("antepenultimo");
+        l3.setText("antepenultimate");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,13 +130,13 @@ public class ganador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(play_3)
-                        .addGap(174, 174, 174)
-                        .addComponent(jButton2))
+                        .addComponent(b1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(153, 153, 153)
+                        .addComponent(b2))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(l2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(par1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -153,12 +153,12 @@ public class ganador extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(par3_2)
                                 .addGap(2, 2, 2))))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(l3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(268, Short.MAX_VALUE)
                         .addComponent(en)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(es)
@@ -168,21 +168,21 @@ public class ganador extends javax.swing.JFrame {
                         .addComponent(ganador))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(11, 11, 11)
+                                .addComponent(l1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(gana, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(157, 157, 157)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(l4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40)
+                                .addComponent(l5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(sonido)
+                .addComponent(b3)
                 .addGap(148, 148, 148))
         );
         layout.setVerticalGroup(
@@ -194,15 +194,15 @@ public class ganador extends javax.swing.JFrame {
                     .addComponent(es))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(l1)
                     .addComponent(gana))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addComponent(l2)
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(l5)
+                    .addComponent(l4)
+                    .addComponent(l3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(par1_1)
@@ -217,13 +217,13 @@ public class ganador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(sonido, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(b3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ganador))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(play_3)
-                            .addComponent(jButton2))
+                            .addComponent(b1)
+                            .addComponent(b2))
                         .addGap(38, 38, 38)))
                 .addGap(12, 12, 12))
         );
@@ -231,28 +231,48 @@ public class ganador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         System.exit(0);        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_b2ActionPerformed
 
-    private void play_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play_3ActionPerformed
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
        ganador ganador= new ganador();
       ganador.setVisible(false);
      dispose();   
-    }//GEN-LAST:event_play_3ActionPerformed
+    }//GEN-LAST:event_b1ActionPerformed
 
-    private void sonidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sonidoActionPerformed
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         AudioClip sonido2;
         sonido2 = java.applet.Applet.newAudioClip(getClass().getResource("audios/aplausos.wav"));
         sonido2.play();
-    }//GEN-LAST:event_sonidoActionPerformed
+    }//GEN-LAST:event_b3ActionPerformed
 
     private void esActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esActionPerformed
+
+        l1.setText("el ganador es el jugador: ");
+        l2.setText("pares consecutivos:");
+        l3.setText("antepenultimo");
+        l4.setText("penultimo");
+        l5.setText("ultimo");
+        b1.setText("jugar");
+        b2.setText("salir");
+        b3.setText("sonido");
+        this.setTitle("ganador");
         en.setEnabled(true);
         es.setEnabled(false);
     }//GEN-LAST:event_esActionPerformed
 
     private void enActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enActionPerformed
+        
+        l1.setText("the winner is the player:");
+        l2.setText("consecutive pairs:");
+        l3.setText("antepenultimate");
+        l4.setText("penultimate");
+        l5.setText("latest");        
+        b1.setText("play again");
+        b2.setText("exit");
+        b3.setText("sound");
+        this.setTitle("winner");
         es.setEnabled(true);
         en.setEnabled(false);
     }//GEN-LAST:event_enActionPerformed
@@ -299,24 +319,24 @@ public class ganador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b1;
+    private javax.swing.JButton b2;
+    private javax.swing.JToggleButton b3;
     private javax.swing.JButton en;
     private javax.swing.JButton es;
     public static javax.swing.JLabel gana;
     private javax.swing.JLabel ganador;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel l1;
+    private javax.swing.JLabel l2;
+    private javax.swing.JLabel l3;
+    private javax.swing.JLabel l4;
+    private javax.swing.JLabel l5;
     public static javax.swing.JLabel par1_1;
     public static javax.swing.JLabel par1_2;
     public static javax.swing.JLabel par2_1;
     public static javax.swing.JLabel par2_2;
     public static javax.swing.JLabel par3_1;
     public static javax.swing.JLabel par3_2;
-    private javax.swing.JButton play_3;
-    private javax.swing.JToggleButton sonido;
     // End of variables declaration//GEN-END:variables
 }

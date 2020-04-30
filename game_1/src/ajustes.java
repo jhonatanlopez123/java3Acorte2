@@ -153,6 +153,7 @@ public class ajustes extends javax.swing.JFrame {
         tex1.setText("number of players you want to play with");
         bot1.setText("accept");
         bot2.setText("go out");
+        this.setTitle("settings");
         es.setEnabled(true);
         en.setEnabled(false);
     }//GEN-LAST:event_enActionPerformed
@@ -162,6 +163,7 @@ public class ajustes extends javax.swing.JFrame {
         tex1.setText("cantidad de jugadores con los que quiere jugar");
         bot1.setText("aceptar");
         bot2.setText("salir");
+        this.setTitle("ajustes");
         en.setEnabled(true);
         es.setEnabled(false);
     }//GEN-LAST:event_esActionPerformed
