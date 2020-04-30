@@ -191,13 +191,13 @@ public class NumberRace extends javax.swing.JFrame {
         scores.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Scores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         player.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        player.setText("player:");
+        player.setText("retun player:");
 
         points.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        points.setText("points:");
+        points.setText("advanced positions:");
 
         missing.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        missing.setText("missing:");
+        missing.setText("missing positions:");
 
         player_2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         player_2.setText("#");
@@ -219,14 +219,13 @@ public class NumberRace extends javax.swing.JFrame {
         scoresLayout.setHorizontalGroup(
             scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(scoresLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(player)
-                        .addComponent(points, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(points)
+                    .addComponent(player)
                     .addComponent(missing)
                     .addComponent(returs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
                 .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(player_2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(point_2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,20 +238,20 @@ public class NumberRace extends javax.swing.JFrame {
             .addGroup(scoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(player)
-                    .addComponent(player_2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(player_2)
+                    .addComponent(player))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(point_2)
                     .addComponent(points))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(missing_2)
                     .addComponent(missing))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(returs)
-                    .addComponent(returns_2))
+                .addGroup(scoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(returns_2)
+                    .addComponent(returs))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -391,7 +390,7 @@ public class NumberRace extends javax.swing.JFrame {
                             .addComponent(pairs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -403,9 +402,8 @@ public class NumberRace extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(mesa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -448,8 +446,8 @@ public class NumberRace extends javax.swing.JFrame {
     
     Random D = new Random();
     int d1 = 0,d2 = 0;
-    d1 = (int)(D.nextDouble()* 2 + 1);
-    d2 = (int)(D.nextDouble()* 2 + 1);
+    d1 = (int)(D.nextDouble()* 6 + 1);
+    d2 = (int)(D.nextDouble()* 6 + 1);
 
     
     dd2[i2] = Integer.toString(d2);
@@ -472,27 +470,28 @@ public class NumberRace extends javax.swing.JFrame {
     }else if (d1!=d2){
      i2=0;
     }
-    sum[i] = d1 + d2;   
+    sum[i] = d1 + d2;
     String c3 = Integer.toString(d2);
     String c = Integer.toString(sum[i]);
-//    if(d1==1 && d2==1){
-//        sum[i]=21;
-//        c="21";
-//    }
+    if(d1==1 && d2==1){
+        sum[i]=21;
+        c="21";
+    }
 
     if (counter[i]>=nivel-6 && counter[i]<nivel){
         d1=0;
         sum[i]=d2;
-        c=c3;        
+        c=c3; 
+ 
     }
-    counter[i] = counter[i] + sum[i]; 
-    suma.setText(c);
-    point_2.setText(Integer.toString(counter[i]));   
-    counter3[i]=nivel-counter[i];
-    missing_2.setText(Integer.toString(counter3[i]));    
     
-    returns_2.setText(Integer.toString(counter4[i]));
 
+    suma.setText(c);
+ //points   
+ //missing 
+    counter[i] = counter[i] + sum[i];
+//returns
+    
     if (counter[i] == nivel || counter2[i] == 3 || winner==1){
         System.out.println("--------------------------------------------------------------------");
         System.out.println("el ganador es: "+jugador[i]);
@@ -507,6 +506,21 @@ public class NumberRace extends javax.swing.JFrame {
             ganador.par2_2.setText(dd2[1]);           
             ganador.par3_1.setText(dd2[2]);
             ganador.par3_2.setText(dd2[2]);
+        }else if(i2==1){
+            ganador.par1_1.setText(dd2[0]);
+            ganador.par1_2.setText(dd2[0]);
+            ganador.par2_1.setText(dd2[1]);
+            ganador.par2_2.setText(dd2[1]);
+            ganador.par3_1.setText("#");
+            ganador.par3_2.setText("#");
+        }else if(i2==0){
+            ganador.par1_1.setText(dd2[0]);
+            ganador.par1_2.setText(dd2[0]);
+            ganador.par2_1.setText("#");
+            ganador.par2_2.setText("#");
+            ganador.par3_1.setText("#");
+            ganador.par3_2.setText("#");            
+            
         }else if (i2<2){
             ganador.par1_1.setText("#");
             ganador.par1_2.setText("#");
@@ -552,7 +566,11 @@ public class NumberRace extends javax.swing.JFrame {
             }
         }
     }
-       
+    returns_2.setText(Integer.toString(counter4[i])); 
+     
+    point_2.setText(Integer.toString(counter[i]));   
+    counter3[i]=nivel-counter[i];
+    missing_2.setText(Integer.toString(counter3[i]));   
     if (d1 == d2){
 
         counter2[i] = counter2[i] + 1;      
@@ -560,6 +578,7 @@ public class NumberRace extends javax.swing.JFrame {
             System.out.println("par");
             counter2[i]=1;
             pairs_2.setText(Integer.toString(counter2[i]));
+            sum[i]=d2*2;
 
 
         }
@@ -567,6 +586,7 @@ public class NumberRace extends javax.swing.JFrame {
             System.out.println("par X2");
             counter2[i]=2;
             pairs_2.setText(Integer.toString(counter2[i]));
+            sum[i]=d2*2;
 
 
         }
@@ -575,8 +595,7 @@ public class NumberRace extends javax.swing.JFrame {
             counter2[i]=3;
             counter[i]=nivel;
             pairs_2.setText(Integer.toString(counter2[i])); 
-
-            
+            sum[i]=d2*2;      
            
         }
         if (counter2[i]==0){
@@ -588,18 +607,21 @@ public class NumberRace extends javax.swing.JFrame {
     }else if (d1 != d2 && counter2[i]==2 || d1 != d2 && counter2[i]==1){
         counter2[i]=0;
         pairs_2.setText(Integer.toString(counter2[i]));
-        for (int d = 0;d<=can-1;d++){
-            d2=0;
-        }
-
 //        System.out.println("borar");
     }
 
+
+   // counter[i] = counter[i] + sum[i];
     for (int t=0;t<=can-1;t++){   
         System.out.println("points: "+counter[t]+" pairs: "+counter2[t]+" missing: "+counter3[t]+" returns: "+counter4[t]+" player: "+jugador[t]);       
     }   
     System.out.println("--------------------------------------------------------------------");    
-    
+
+ 
+
+     
+      
+     
     i++;
     
     if (i == can){
