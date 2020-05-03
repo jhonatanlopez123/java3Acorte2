@@ -22,9 +22,7 @@ public class NumberRace extends javax.swing.JFrame {
     private int counter2[]=new int[3000];
     private int counter3[]=new int[3000];
     private int counter4[]=new int[3000];
-
     private String dd2[]=new String[3000];
-
     private int da1[]=new int[3000];
     private int da2[]=new int[3000];
     int i= 0;
