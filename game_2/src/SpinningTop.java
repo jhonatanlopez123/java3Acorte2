@@ -1,6 +1,7 @@
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.ImageIcon;
 
@@ -16,20 +17,23 @@ import javax.swing.ImageIcon;
  */
     public class SpinningTop extends javax.swing.JFrame {
     
-    int i=1;
-    private int counter[]=new int[5];
-    private int counter1[]=new int[5];
-    
-    private int counter2[]=new int[5];
-    private int counter3[]=new int[5];
-
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int y2=4;
+        int f=0;
+        int i=0;
+        int t1=0;
+        int w = 0;
+        private int counter[]=new int[5];
+        int counter1=0;
+        private int f2[]=new int[5];
+        int c2=4;
     /**
      * Creates new form SpinningTop
      */
     public SpinningTop() {
         initComponents();
         this.setLocationRelativeTo(null); 
-        counter1[0] = 0;
+
     }
     
     /**
@@ -54,9 +58,9 @@ import javax.swing.ImageIcon;
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         coins1 = new javax.swing.JLabel();
-        coins2 = new javax.swing.JLabel();
+        coins22 = new javax.swing.JLabel();
         coins4 = new javax.swing.JLabel();
-        coins3 = new javax.swing.JLabel();
+        coins33 = new javax.swing.JLabel();
         pirinola = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         coins = new javax.swing.JComboBox<>();
@@ -66,7 +70,7 @@ import javax.swing.ImageIcon;
         jPanel4 = new javax.swing.JPanel();
         acc = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        winner = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spinning top");
@@ -120,14 +124,14 @@ import javax.swing.ImageIcon;
         coins1.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
         coins1.setText("0");
 
-        coins2.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
-        coins2.setText("0");
+        coins22.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
+        coins22.setText("0");
 
         coins4.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
         coins4.setText("0");
 
-        coins3.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
-        coins3.setText("0");
+        coins33.setFont(new java.awt.Font("Terminator Two", 1, 10)); // NOI18N
+        coins33.setText("0");
 
         pirinola.setFont(new java.awt.Font("Terminator Two", 1, 12)); // NOI18N
         pirinola.setText("   ?");
@@ -151,13 +155,13 @@ import javax.swing.ImageIcon;
                         .addGap(46, 46, 46)
                         .addComponent(coins4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(coins2)
+                .addComponent(coins22)
                 .addGap(69, 69, 69))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(169, 169, 169)
-                        .addComponent(coins3))
+                        .addComponent(coins33))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(150, 150, 150)
                         .addComponent(jLabel8))
@@ -199,7 +203,7 @@ import javax.swing.ImageIcon;
                         .addGap(89, 89, 89)
                         .addComponent(jLabel6)
                         .addGap(22, 22, 22)
-                        .addComponent(coins2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(coins22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -215,14 +219,14 @@ import javax.swing.ImageIcon;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(coins3)
+                .addComponent(coins33)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(224, 222, 222));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "config zone", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Terminator Two", 1, 12))); // NOI18N
 
-        coins.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5", "10", "20", "30" }));
+        coins.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5", "10", "20", "30", "1" }));
 
         play2.setBackground(new java.awt.Color(153, 255, 153));
         play2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/play.png"))); // NOI18N
@@ -300,8 +304,8 @@ import javax.swing.ImageIcon;
         jPanel5.setBackground(new java.awt.Color(221, 221, 221));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "winner", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Terminator Two", 1, 12))); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Terminator Two", 1, 48)); // NOI18N
-        jLabel3.setText("?");
+        winner.setFont(new java.awt.Font("Terminator Two", 1, 48)); // NOI18N
+        winner.setText("?");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -309,13 +313,13 @@ import javax.swing.ImageIcon;
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
-                .addComponent(jLabel3)
+                .addComponent(winner)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel3)
+                .addComponent(winner)
                 .addGap(0, 17, Short.MAX_VALUE))
         );
 
@@ -378,115 +382,166 @@ import javax.swing.ImageIcon;
         return retValue;
     }
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
-       
+    i++;
     int pi = 0;
-    String cains2 = coins.getSelectedItem().toString();
-    int cains = Integer.parseInt(cains2);
-
+    String coins3 = coins.getSelectedItem().toString();
+    int coins2 = Integer.parseInt(coins3);
     Random D = new Random();
     pi = (int)(D.nextDouble()* 6 + 1);
-    if(i < 2){
+    if(f==0){
+     for (int y=0;y<=3;y++){
+          counter[y]= coins2;
+          f2[y]=1;
+     }
+    }
+    System.out.println(y2);
+//    if (counter[i] == 0){
+//        if (i >= 0 && i <= 2){
+//            i++;
+//        }else if (i == 3){
+//            i = 0;
+//        }
+//    }
+    if (counter[i] >= 1) {    
+        switch (i){ 
+            case 0:
+               play.setText("Spin around -> player 1");  
+            break;
+            case 1:
+               play.setText("Spin around -> player 2");  
+            break;
+            case 2:
+               play.setText("Spin around -> player 3");  
+            break;
+            case 3:
+               play.setText("Spin around -> player 4");  
+            break;    
+        }
+        switch (pi){
+            case 1:
+                System.out.println("pon 1");
+                pirinola.setText("pon 1");
+                    if (i == 3){
+                        if (counter[2]>=1){
+                            counter[2]--;
+                            counter1++;
+                       }
+                    }else if (i == 0){
+                        if (counter[3]>=1){
+                            counter[3]--;
+                            counter1++;
+                        }
+                    }else if (i == 1){
+                        if (counter[0]>=1){
+                            counter[0]--;
+                            counter1++;
+                        }
+                    }else if (i == 2){
+                        if (counter[1]>=1){
+                            counter[1]--;
+                            counter1++;
+                        }
+                    }
+                    f=1;
+                    break;
+
+    //        case 2:
+    //            System.out.println("pon 2");
+    //            pirinola.setText("pon 2");
+    //            counter[i]=counter[i]-2;
+    //            counter1=counter1+2;
+    //        break;
+    //        case 3:
+    //            System.out.println("toma 1");
+    //            pirinola.setText("toma 1");
+    //            counter[i]++;
+    //            counter1--;
+    //        break;
+    //        case 4:
+    //            System.out.println("toma 2");
+    //            pirinola.setText("toma 2");
+    //            counter[i]--;
+    //            counter1++;
+    //        break;
+    //        case 5:
+    //            System.out.println("toma todo");
+    //            pirinola.setText("toma todo");
+    //            counter[i]=counter1;
+    //            counter1=0;
+    //        break; 
+    //        case 6:
+    //            System.out.println("todos ponen");
+    //            pirinola.setText("todos ponen");
+    //            for (int y=0;y<=3;y++){
+    //            counter[y]--;
+    //            counter1++;
+    //            if (counter[y]==0){
+    //                counter[y]++;
+    //                counter1--;
+    //            }
+    //            }
+    //        break;
+                }
+    y2=4;
     for (int y=0;y<=3;y++){
-        counter[y]= cains;
+          if (counter[y]==0){
+                y2--;
+          }else{
+                w = y;
+          }
+          System.out.println(y2);
+     }
+    System.out.println(i);
+    if (y2 == 1){
+        if (w == 3){
+            System.out.println("el ganador es: 4");
+            winner.setText("4");
+            play.setEnabled(false);
+        }
+        if (w == 0){
+            System.out.println("el ganador es: 1");
+            winner.setText("1");
+            play.setEnabled(false);  
+        } 
+        if (w == 2){
+            System.out.println("el ganador es: 3");
+            winner.setText("3");
+            play.setEnabled(false);
+            
+        }
+        if (w == 1){
+            System.out.println("el ganador es: 2");
+            winner.setText("2");
+            play.setEnabled(false);
+            
+        }
     }
-
-    }
-
-    switch (i){
-        case 0:
-           play.setText("Spin around -> player 1");  
-        break;
-        case 1:
-           play.setText("Spin around -> player 2");  
-        break;
-        case 2:
-           play.setText("Spin around -> player 3");  
-        break;
-        case 3:
-           play.setText("Spin around -> player 4");  
-        break;
-    }
-    switch (pi){
-        case 0:
-           pirinola.setText("?");  
-        break;
-        case 1:
-           pirinola.setText("Pon 1");
-           if (counter1[0] > 0){
-                
-                counter1[0]++;
-           }
-           counter[i-1]--;
-           
-        break;
-        case 2:
-           pirinola.setText("Pon 2");
-           counter1[0]= counter1[0]+2;
-           if (counter[i-1] >= 2){
-           counter[i-1]= counter[i-1]-2;
-           }
-        break;
-        case 3:
-           pirinola.setText("Toma 1");
-           
-           if (counter1[0] > 0){
-                counter1[0]--;
-                counter[i-1]++;
-           }          
-        break;
-        case 4:
-            if (counter1[0]==1){
-                pi = (int)(D.nextDouble()* 6 + 1);
-            }
-           pirinola.setText("Toma 2"); 
-           
-           if (counter1[0] > 0 || counter1[0] > 1){
-                counter1[0]= counter1[0]-2;
-                counter[i-1]= counter[i-1]+2;
-           }
-           
-        break;
-        case 5:
-            pirinola.setText("Toma todo");
-            if (counter1[0]==0){
-                counter[i-1]=counter[i-1];
-            }else if (counter1[0]>=1){
-                counter[i-1] = counter[i-1] + counter1[0];
-            }
-            counter1[0]=0;
-        break;
-        case 6:
-           pirinola.setText("Todos ponen");
-                counter1[0]=counter1[0]+4;
-                for (int y=0;y<=3;y++){
-                    counter[y]--;
-               }
-        break;
-    }
-
     for (int y=1;y<=4;y++){
-        System.out.println("jugador "+y+" : "+counter[y-1]);
-        
+        System.out.println("jugador "+y+" : "+counter[y-1]);       
     }
-    String acc2 = Integer.toString(counter1[0]);
+    String acc2 = Integer.toString(counter1);
     String co1 = Integer.toString(counter[0]);
     String co2 = Integer.toString(counter[1]);
     String co3 = Integer.toString(counter[2]);
     String co4 = Integer.toString(counter[3]);
     acc.setText(acc2);
     coins1.setText(co1);
-    coins2.setText(co2);
-    coins3.setText(co3);
+    coins22.setText(co2);
+    coins33.setText(co3);
     coins4.setText(co4);
-    System.out.println("---------------------------------");
-    i++;
-    if (i==4){
-        i=0;
+    System.out.println("---------------------------------");  
+
+    }
+    if (i==3){
+        i=-1;
     }
     }//GEN-LAST:event_playActionPerformed
 
     private void restartgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restartgameActionPerformed
-        // TODO add your handling code here:
+    
+        SpinningTop SpinningTop= new SpinningTop();
+        SpinningTop.setVisible(true);
+        dispose();  
     }//GEN-LAST:event_restartgameActionPerformed
 
     private void play2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play2ActionPerformed
@@ -499,13 +554,13 @@ import javax.swing.ImageIcon;
         System.out.println("---------------------------------");
         int cains = Integer.parseInt(cains2);    
         coins1.setText(cains2);
-        coins2.setText(cains2);
-        coins3.setText(cains2);
+        coins22.setText(cains2);
+        coins33.setText(cains2);
         coins4.setText(cains2);
         play.setEnabled(true);
         play.setText("Spin around -> player 1");
         restartgame.setEnabled(true);
-        play2.setEnabled(true);
+        play2.setEnabled(false);
         
     }//GEN-LAST:event_play2ActionPerformed
 
@@ -554,14 +609,13 @@ import javax.swing.ImageIcon;
     private javax.swing.JLabel acc;
     public static javax.swing.JComboBox<String> coins;
     private javax.swing.JLabel coins1;
-    private javax.swing.JLabel coins2;
-    private javax.swing.JLabel coins3;
+    private javax.swing.JLabel coins22;
+    private javax.swing.JLabel coins33;
     private javax.swing.JLabel coins4;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -577,5 +631,6 @@ import javax.swing.ImageIcon;
     private javax.swing.JButton play;
     private javax.swing.JButton play2;
     private javax.swing.JButton restartgame;
+    private javax.swing.JLabel winner;
     // End of variables declaration//GEN-END:variables
 }

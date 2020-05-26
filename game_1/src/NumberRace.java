@@ -441,8 +441,8 @@ public class NumberRace extends javax.swing.JFrame {
     }
     Random D = new Random();
     int d1 = 0,d2 = 0;
-    d1 = (int)(D.nextDouble()* 6 + 1);
-    d2 = (int)(D.nextDouble()* 6 + 1);   
+    d1 = (int)(D.nextDouble()* 2 + 1);
+    d2 = (int)(D.nextDouble()* 2 + 1);   
     dd2[i2] = Integer.toString(d2);
 //    for (int t=0;t<=i2;t++){  
 //        System.out.println(dd2[t]);
