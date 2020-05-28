@@ -435,121 +435,121 @@ import javax.swing.ImageIcon;
                         }
                         f=1;
                         break;
-    //            case 2:
-    //                System.out.println("pon 2");
-    //                pirinola.setText("pon 2");
-    //                    if (i == 3){
-    //                        if (counter[2]>=2){
-    //                            counter[2]=counter[2]-2;
-    //                            counter1=counter1+2;
-    //                       }
-    //                    }else if (i == 0){
-    //                        if (counter[3]>=2){
-    //                            counter[3]=counter[2]-2;
-    //                            counter1=counter1+2;
-    //                        }
-    //                    }else if (i == 1){
-    //                        if (counter[0]>=2){
-    //                            counter[0]=counter[2]-2;
-    //                            counter1=counter1+2;
-    //                        }
-    //                    }else if (i == 2){
-    //                        if (counter[1]>=2){
-    //                            counter[1]=counter[2]-2;
-    //                            counter1=counter1+2;
-    //                        }
-    //                    }
-    //                    f=1;
-    //                    break;
-    //            case 3:
-    //                System.out.println("toma 1");
-    //                pirinola.setText("toma 1");
-    //                    if (i == 3){
-    //                        if (counter1>=1){
-    //                            counter1--;
-    //                            counter[2]++;
-    //                       }
-    //                    }else if (i == 0){
-    //                        if (counter1>=1){
-    //                            counter1--;
-    //                            counter[3]++;
-    //                        }
-    //                    }else if (i == 1){
-    //                        if (counter1>=1){
-    //                            counter1--;
-    //                            counter[0]++;
-    //                        }
-    //                    }else if (i == 2){
-    //                        if (counter1>=1){
-    //                            counter1--;
-    //                            counter[1]++;
-    //                        }
-    //                    }
-    //                    f=1;
-    //                    break;
-    //            case 4:
-    //                System.out.println("toma 2");
-    //                pirinola.setText("toma 2");
-    //                    if (i == 3){
-    //                        if (counter1>=2){
-    //                            counter1=counter1-2;
-    //                            counter[2]=counter[2]+2;
-    //                       }
-    //                    }else if (i == 0){
-    //                        if (counter1>=2){
-    //                            counter1=counter1-2;
-    //                            counter[3]=counter[3]+2;
-    //                        }
-    //                    }else if (i == 1){
-    //                        if (counter1>=2){
-    //                            counter1=counter1-2;
-    //                            counter[0]=counter[0]+2;
-    //                        }
-    //                    }else if (i == 2){
-    //                        if (counter1>=2){
-    //                            counter1=counter1-2;
-    //                            counter[1]=counter[1]+2;
-    //                        }
-    //                    }
-    //                    f=1;
-    //                    break;
-    //            case 5:
-    //                System.out.println("todos ponen");
-    //                pirinola.setText("todos ponen");                
-    //                    for (int y=0;y<=3;y++){
-    //                        if (counter[y] > 0){
-    //                            counter1++;
-    //                            counter[y]--;
-    //                        }
-    //                    }
-    //                    f=1;
-    //                    break;                
-    //            case 6:
-    //                System.out.println("toma todo");
-    //                pirinola.setText("toma todo");                
-    //                    if (i == 3){
-    //                        if (counter1>=1){
-    //                            counter[2]=counter[2]+counter1;
-    //                            counter1=0;                            
-    //                       }
-    //                    }else if (i == 0){
-    //                        if (counter1>=1){
-    //                            counter[3]=counter[3]+counter1;
-    //                            counter1=0;
-    //                        }
-    //                    }else if (i == 1){
-    //                        if (counter1>=1){
-    //                            counter[0]=counter[0]+counter1;
-    //                            counter1=0;
-    //                        }
-    //                    }else if (i == 2){
-    //                        if (counter1>=1){
-    //                            counter[1]=counter[1]+counter1;
-    //                            counter1=0;
-    //                        }
-    //                    }
-    //                    f=1;
-    //                    break;                
+                case 2:
+                    System.out.println("pon 2");
+                    pirinola.setText("pon 2");
+                        if (i == 3){
+                            if (counter[3]>=2){
+                                counter[3]=counter[3]-2;
+                                counter1=counter1+2;
+                           }
+                        }else if (i == 0){
+                            if (counter[0]>=2){
+                                counter[0]=counter[0]-2;
+                                counter1=counter1+2;
+                            }
+                        }else if (i == 1){
+                            if (counter[1]>=2){
+                                counter[1]=counter[1]-2;
+                                counter1=counter1+2;
+                            }
+                        }else if (i == 2){
+                            if (counter[2]>=2){
+                                counter[2]=counter[2]-2;
+                                counter1=counter1+2;
+                            }
+                        }
+                        f=1;
+                        break;
+                case 3:
+                    System.out.println("toma 1");
+                    pirinola.setText("toma 1");
+                        if (i == 3){
+                            if (counter1>=1){
+                                counter1--;
+                                counter[3]++;
+                           }
+                        }else if (i == 0){
+                            if (counter1>=1){
+                                counter1--;
+                                counter[0]++;
+                            }
+                        }else if (i == 1){
+                            if (counter1>=1){
+                                counter1--;
+                                counter[1]++;
+                            }
+                        }else if (i == 2){
+                            if (counter1>=1){
+                                counter1--;
+                                counter[2]++;
+                            }
+                        }
+                        f=1;
+                        break;
+                case 4:
+                    System.out.println("toma 2");
+                    pirinola.setText("toma 2");
+                        if (i == 3){
+                            if (counter1>=2){
+                                counter1=counter1-2;
+                                counter[3]=counter[3]+2;
+                           }
+                        }else if (i == 0){
+                            if (counter1>=2){
+                                counter1=counter1-2;
+                                counter[0]=counter[0]+2;
+                            }
+                        }else if (i == 1){
+                            if (counter1>=2){
+                                counter1=counter1-2;
+                                counter[1]=counter[1]+2;
+                            }
+                        }else if (i == 2){
+                            if (counter1>=2){
+                                counter1=counter1-2;
+                                counter[2]=counter[2]+2;
+                            }
+                        }
+                        f=1;
+                        break;
+                case 5:
+                    System.out.println("todos ponen");
+                    pirinola.setText("todos ponen");                
+                        for (int y=0;y<=3;y++){
+                            if (counter[y] > 0){
+                                counter1++;
+                                counter[y]--;
+                            }
+                        }
+                        f=1;
+                        break;                
+                case 6:
+                    System.out.println("toma todo");
+                    pirinola.setText("toma todo");                
+                        if (i == 3){
+                            if (counter1>=1){
+                                counter[3]=counter[3]+counter1;
+                                counter1=0;                            
+                           }
+                        }else if (i == 0){
+                            if (counter1>=1){
+                                counter[0]=counter[0]+counter1;
+                                counter1=0;
+                            }
+                        }else if (i == 1){
+                            if (counter1>=1){
+                                counter[1]=counter[1]+counter1;
+                                counter1=0;
+                            }
+                        }else if (i == 2){
+                            if (counter1>=1){
+                                counter[2]=counter[2]+counter1;
+                                counter1=0;
+                            }
+                        }
+                        f=1;
+                        break;                
                     }
         y2=4;
         for (int y=0;y<=3;y++){
@@ -610,7 +610,7 @@ import javax.swing.ImageIcon;
         System.out.println("in: "+in);
         }
     }else if (counter[i] == 0){
-        i=i+2;
+        i++;
     }
     if (i==4){
         i=0;
