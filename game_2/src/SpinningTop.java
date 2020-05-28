@@ -228,7 +228,7 @@ import javax.swing.ImageIcon;
         jPanel3.setBackground(new java.awt.Color(224, 222, 222));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "config zone", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Terminator Two", 1, 12))); // NOI18N
 
-        coins.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "5", "10", "20", "30", " " }));
+        coins.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "5", "10", "20", "30" }));
 
         play2.setBackground(new java.awt.Color(153, 255, 153));
         play2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/play.png"))); // NOI18N
@@ -397,227 +397,224 @@ import javax.swing.ImageIcon;
              f2[y]=1;
          }
     }
-    if (counter[i] == 0){
-        if (i == 3){
-            i = 0;
-        }else if (i >= 1){
-            i++;
-        }
-    }
-    if (counter[i] >= 1 && in2 >= 1) {    
-        if (i == 0){
-            play.setText("Spin around -> player 2"); 
-        }else if (i == 1){
-            play.setText("Spin around -> player 3");
-        }else if (i == 2){
-            play.setText("Spin around -> player 4");
-        }else if (i == 3){
-            play.setText("Spin around -> player 1");
-        }
-        switch (pi){
-            case 1:
-                System.out.println("pon 1");
-                pirinola.setText("pon 1");
-                    if (i == 2){
-                        if (counter[2]>=1){
-                            counter[2]--;
-                            counter1++;
-                       }
-                    }else if (i == 3){
-                        if (counter[3]>=1){
-                            counter[3]--;
-                            counter1++;
+    if (counter[i] > 0){
+        if (counter[i] >= 1 && in2 >= 1) {    
+            if (i == 0){
+                play.setText("Spin around -> player 2"); 
+            }else if (i == 1){
+                play.setText("Spin around -> player 3");
+            }else if (i == 2){
+                play.setText("Spin around -> player 4");
+            }else if (i == 3){
+                play.setText("Spin around -> player 1");
+            }
+            switch (pi){
+                case 1:
+                    System.out.println("pon 1");
+                    pirinola.setText("pon 1");
+                        if (i == 2){
+                            if (counter[2]>=1){
+                                counter[2]--;
+                                counter1++;
+                           }
+                        }else if (i == 3){
+                            if (counter[3]>=1){
+                                counter[3]--;
+                                counter1++;
+                            }
+                        }else if (i == 0){
+                            if (counter[0]>=1){
+                                counter[0]--;
+                                counter1++;
+                            }
+                        }else if (i == 1){
+                            if (counter[1]>=1){
+                                counter[1]--;
+                                counter1++;
+                            }
                         }
-                    }else if (i == 0){
-                        if (counter[0]>=1){
-                            counter[0]--;
-                            counter1++;
-                        }
-                    }else if (i == 1){
-                        if (counter[1]>=1){
-                            counter[1]--;
-                            counter1++;
-                        }
+                        f=1;
+                        break;
+    //            case 2:
+    //                System.out.println("pon 2");
+    //                pirinola.setText("pon 2");
+    //                    if (i == 3){
+    //                        if (counter[2]>=2){
+    //                            counter[2]=counter[2]-2;
+    //                            counter1=counter1+2;
+    //                       }
+    //                    }else if (i == 0){
+    //                        if (counter[3]>=2){
+    //                            counter[3]=counter[2]-2;
+    //                            counter1=counter1+2;
+    //                        }
+    //                    }else if (i == 1){
+    //                        if (counter[0]>=2){
+    //                            counter[0]=counter[2]-2;
+    //                            counter1=counter1+2;
+    //                        }
+    //                    }else if (i == 2){
+    //                        if (counter[1]>=2){
+    //                            counter[1]=counter[2]-2;
+    //                            counter1=counter1+2;
+    //                        }
+    //                    }
+    //                    f=1;
+    //                    break;
+    //            case 3:
+    //                System.out.println("toma 1");
+    //                pirinola.setText("toma 1");
+    //                    if (i == 3){
+    //                        if (counter1>=1){
+    //                            counter1--;
+    //                            counter[2]++;
+    //                       }
+    //                    }else if (i == 0){
+    //                        if (counter1>=1){
+    //                            counter1--;
+    //                            counter[3]++;
+    //                        }
+    //                    }else if (i == 1){
+    //                        if (counter1>=1){
+    //                            counter1--;
+    //                            counter[0]++;
+    //                        }
+    //                    }else if (i == 2){
+    //                        if (counter1>=1){
+    //                            counter1--;
+    //                            counter[1]++;
+    //                        }
+    //                    }
+    //                    f=1;
+    //                    break;
+    //            case 4:
+    //                System.out.println("toma 2");
+    //                pirinola.setText("toma 2");
+    //                    if (i == 3){
+    //                        if (counter1>=2){
+    //                            counter1=counter1-2;
+    //                            counter[2]=counter[2]+2;
+    //                       }
+    //                    }else if (i == 0){
+    //                        if (counter1>=2){
+    //                            counter1=counter1-2;
+    //                            counter[3]=counter[3]+2;
+    //                        }
+    //                    }else if (i == 1){
+    //                        if (counter1>=2){
+    //                            counter1=counter1-2;
+    //                            counter[0]=counter[0]+2;
+    //                        }
+    //                    }else if (i == 2){
+    //                        if (counter1>=2){
+    //                            counter1=counter1-2;
+    //                            counter[1]=counter[1]+2;
+    //                        }
+    //                    }
+    //                    f=1;
+    //                    break;
+    //            case 5:
+    //                System.out.println("todos ponen");
+    //                pirinola.setText("todos ponen");                
+    //                    for (int y=0;y<=3;y++){
+    //                        if (counter[y] > 0){
+    //                            counter1++;
+    //                            counter[y]--;
+    //                        }
+    //                    }
+    //                    f=1;
+    //                    break;                
+    //            case 6:
+    //                System.out.println("toma todo");
+    //                pirinola.setText("toma todo");                
+    //                    if (i == 3){
+    //                        if (counter1>=1){
+    //                            counter[2]=counter[2]+counter1;
+    //                            counter1=0;                            
+    //                       }
+    //                    }else if (i == 0){
+    //                        if (counter1>=1){
+    //                            counter[3]=counter[3]+counter1;
+    //                            counter1=0;
+    //                        }
+    //                    }else if (i == 1){
+    //                        if (counter1>=1){
+    //                            counter[0]=counter[0]+counter1;
+    //                            counter1=0;
+    //                        }
+    //                    }else if (i == 2){
+    //                        if (counter1>=1){
+    //                            counter[1]=counter[1]+counter1;
+    //                            counter1=0;
+    //                        }
+    //                    }
+    //                    f=1;
+    //                    break;                
                     }
-                    f=1;
-                    break;
-            case 2:
-                System.out.println("pon 2");
-                pirinola.setText("pon 2");
-                    if (i == 3){
-                        if (counter[2]>=2){
-                            counter[2]=counter[2]-2;
-                            counter1=counter1+2;
-                       }
-                    }else if (i == 0){
-                        if (counter[3]>=2){
-                            counter[3]=counter[2]-2;
-                            counter1=counter1+2;
-                        }
-                    }else if (i == 1){
-                        if (counter[0]>=2){
-                            counter[0]=counter[2]-2;
-                            counter1=counter1+2;
-                        }
-                    }else if (i == 2){
-                        if (counter[1]>=2){
-                            counter[1]=counter[2]-2;
-                            counter1=counter1+2;
-                        }
-                    }
-                    f=1;
-                    break;
-            case 3:
-                System.out.println("toma 1");
-                pirinola.setText("toma 1");
-                    if (i == 3){
-                        if (counter1>=1){
-                            counter1--;
-                            counter[2]++;
-                       }
-                    }else if (i == 0){
-                        if (counter1>=1){
-                            counter1--;
-                            counter[3]++;
-                        }
-                    }else if (i == 1){
-                        if (counter1>=1){
-                            counter1--;
-                            counter[0]++;
-                        }
-                    }else if (i == 2){
-                        if (counter1>=1){
-                            counter1--;
-                            counter[1]++;
-                        }
-                    }
-                    f=1;
-                    break;
-            case 4:
-                System.out.println("toma 2");
-                pirinola.setText("toma 2");
-                    if (i == 3){
-                        if (counter1>=2){
-                            counter1=counter1-2;
-                            counter[2]=counter[2]+2;
-                       }
-                    }else if (i == 0){
-                        if (counter1>=2){
-                            counter1=counter1-2;
-                            counter[3]=counter[3]+2;
-                        }
-                    }else if (i == 1){
-                        if (counter1>=2){
-                            counter1=counter1-2;
-                            counter[0]=counter[0]+2;
-                        }
-                    }else if (i == 2){
-                        if (counter1>=2){
-                            counter1=counter1-2;
-                            counter[1]=counter[1]+2;
-                        }
-                    }
-                    f=1;
-                    break;
-            case 5:
-                System.out.println("todos ponen");
-                pirinola.setText("todos ponen");                
-                    for (int y=0;y<=3;y++){
-                        if (counter[y] > 0){
-                            counter1++;
-                            counter[y]--;
-                        }
-                    }
-                    f=1;
-                    break;                
-            case 6:
-                System.out.println("toma todo");
-                pirinola.setText("toma todo");                
-                    if (i == 3){
-                        if (counter1>=1){
-                            counter[2]=counter[2]+counter1;
-                            counter1=0;                            
-                       }
-                    }else if (i == 0){
-                        if (counter1>=1){
-                            counter[3]=counter[3]+counter1;
-                            counter1=0;
-                        }
-                    }else if (i == 1){
-                        if (counter1>=1){
-                            counter[0]=counter[0]+counter1;
-                            counter1=0;
-                        }
-                    }else if (i == 2){
-                        if (counter1>=1){
-                            counter[1]=counter[1]+counter1;
-                            counter1=0;
-                        }
-                    }
-                    f=1;
-                    break;                
-                }
-    y2=4;
-    for (int y=0;y<=3;y++){
-          if (counter[y]==0){
-                y2--;
-          }else{
-                w = y;
-          }
-     }
-    System.out.println(i);
-    if (y2 == 1){
-        if (w == 3){
-            System.out.println("el ganador es: 4");
-            winner.setText("4");
-            play.setEnabled(false);
-        }
-        if (w == 0){
-            System.out.println("el ganador es: 1");
-            winner.setText("1");
-            play.setEnabled(false);  
-        } 
-        if (w == 2){
-            System.out.println("el ganador es: 3");
-            winner.setText("3");
-            play.setEnabled(false);
+        y2=4;
+        for (int y=0;y<=3;y++){
+              if (counter[y]==0){
+                    y2--;
+              }else{
+                    w = y;
+              }
+         }
+        System.out.println(i);
+        if (y2 == 1){
+            if (w == 3){
+                System.out.println("el ganador es: 4");
+                winner.setText("4");
+                play.setEnabled(false);
+            }
+            if (w == 0){
+                System.out.println("el ganador es: 1");
+                winner.setText("1");
+                play.setEnabled(false);  
+            } 
+            if (w == 2){
+                System.out.println("el ganador es: 3");
+                winner.setText("3");
+                play.setEnabled(false);
 
-        }
-        if (w == 1){
-            System.out.println("el ganador es: 2");
-            winner.setText("2");
-            play.setEnabled(false);
+            }
+            if (w == 1){
+                System.out.println("el ganador es: 2");
+                winner.setText("2");
+                play.setEnabled(false);
 
+            }
+        }else if (y2 == 0){
+                System.out.println("nadie gana");
+                winner.setFont(new java.awt.Font("Terminator Two", 1, 12));
+                winner.setText("nadie gana");
+                play.setEnabled(false);
         }
-    }
-    for (int y=1;y<=4;y++){
-        System.out.println("jugador "+y+" : "+counter[y-1]);       
-    }
-    String acc2 = Integer.toString(counter1);
-    String co1 = Integer.toString(counter[0]);
-    String co2 = Integer.toString(counter[1]);
-    String co3 = Integer.toString(counter[2]);
-    String co4 = Integer.toString(counter[3]);
-    acc.setText(acc2);
-    coins1.setText(co1);
-    coins22.setText(co2);
-    coins33.setText(co3);
-    coins4.setText(co4);
-    System.out.println("---------------------------------");  
-    i++;
-    in++;
-    System.out.println("i: "+i);
-    System.out.println("in: "+in);
+        for (int y=1;y<=4;y++){
+            System.out.println("jugador "+y+" : "+counter[y-1]);       
+        }
+        String acc2 = Integer.toString(counter1);
+        String co1 = Integer.toString(counter[0]);
+        String co2 = Integer.toString(counter[1]);
+        String co3 = Integer.toString(counter[2]);
+        String co4 = Integer.toString(counter[3]);
+        acc.setText(acc2);
+        coins1.setText(co1);
+        coins22.setText(co2);
+        coins33.setText(co3);
+        coins4.setText(co4);
+        System.out.println("---------------------------------");
+        
+        i++;
+        in++;
+        System.out.println("i: "+i);
+        System.out.println("in: "+in);
+        }
+    }else if (counter[i] == 0){
+        i=i+2;
     }
     if (i==4){
         i=0;
-    }
-//    if (i==6){
-//        i=0;
-//    }
-//    if (in==5){
-//        in=1;
-//    } 
+    } 
     in2 = 1;
     System.out.println("i: "+i);
     System.out.println("in: "+in);    
