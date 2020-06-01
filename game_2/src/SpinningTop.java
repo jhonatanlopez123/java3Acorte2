@@ -4,6 +4,7 @@ import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.ImageIcon;
+import javax.swing.WindowConstants;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,7 +18,6 @@ import javax.swing.ImageIcon;
  */
     public class SpinningTop extends javax.swing.JFrame {
     
-        ArrayList<Integer> list = new ArrayList<Integer>();
         int y2=4;
         int f=0;
         int i=-1;
@@ -29,6 +29,7 @@ import javax.swing.ImageIcon;
         int c2=4;
         int in=0;
         int in2 = 0;
+        int in3 = 0;
     /**
      * Creates new form SpinningTop
      */
@@ -77,6 +78,7 @@ import javax.swing.ImageIcon;
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Spinning top");
         setIconImage(getIconImage());
+        setIconImages(getIconImages());
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -231,7 +233,7 @@ import javax.swing.ImageIcon;
         coins.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "5", "10", "20", "30" }));
 
         play2.setBackground(new java.awt.Color(153, 255, 153));
-        play2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/play.png"))); // NOI18N
+        play2.setText("play");
         play2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 play2ActionPerformed(evt);
@@ -344,7 +346,7 @@ import javax.swing.ImageIcon;
                         .addComponent(play, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(92, 92, 92)
                         .addComponent(restartgame)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,7 +357,7 @@ import javax.swing.ImageIcon;
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -369,7 +371,7 @@ import javax.swing.ImageIcon;
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -378,14 +380,22 @@ import javax.swing.ImageIcon;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().
-        getImage(ClassLoader.getSystemResource("icons/icon.png"));
-        return retValue;
-    }
+//    public Image getIconImage() {
+//         Image retValue = Toolkit.getDefaultToolkit().
+//         getImage(ClassLoader.getSystemResource("icons/icon2.png"));
+//         return retValue;
+//}  
+
+// profe, las imagenes de este codigo servian pero al momento de descargar 
+// este desde mi github ocurre un error, asi que e decido no poner iconos ni imagenes.
     private void playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playActionPerformed
  
-        
+    if (i == 3){
+        in3 = 4;
+    }else if (i < 3 && i >= 0){
+        in3 = i + 1;
+    }
+    System.out.println("player's turn "+in3);
     int pi = 0;
     String coins3 = coins.getSelectedItem().toString();
     int coins2 = Integer.parseInt(coins3);
@@ -559,7 +569,6 @@ import javax.swing.ImageIcon;
                     w = y;
               }
          }
-        System.out.println(i);
         if (y2 == 1){
             if (w == 3){
                 System.out.println("el ganador es: 4");
@@ -602,29 +611,36 @@ import javax.swing.ImageIcon;
         coins22.setText(co2);
         coins33.setText(co3);
         coins4.setText(co4);
-        System.out.println("---------------------------------");
-        
+        System.out.println("---------------------------------");       
         i++;
         in++;
-        System.out.println("i: "+i);
-        System.out.println("in: "+in);
         }
     }else if (counter[i] == 0){
         i++;
+        System.out.println("player "+i+" is eliminated");
+        System.out.println("---------------------------------"); 
+        if (i == 1){
+            play.setText("Spin around  -> player 2"); 
+        }else if (i == 2){
+            play.setText("Spin around  -> player 3");
+        }else if (i == 3){
+            play.setText("Spin around  -> player 4");
+        }else if (i == 4){
+            play.setText("Spin around  -> player 1");
+        }       
     }
     if (i==4){
         i=0;
     } 
-    in2 = 1;
-    System.out.println("i: "+i);
-    System.out.println("in: "+in);    
+    in2 = 1;   
     }//GEN-LAST:event_playActionPerformed
 
     private void restartgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restartgameActionPerformed
     
         SpinningTop SpinningTop= new SpinningTop();
         SpinningTop.setVisible(true);
-        dispose();  
+        dispose(); 
+
     }//GEN-LAST:event_restartgameActionPerformed
 
     private void play2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_play2ActionPerformed
@@ -646,13 +662,14 @@ import javax.swing.ImageIcon;
         play.setEnabled(true);
         restartgame.setEnabled(true);
         play2.setEnabled(false);
+        jButton2.setEnabled(false);
         
     }//GEN-LAST:event_play2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         add_more_coins add_more_coins= new add_more_coins();
-//        ganador.gana.setText(c2);
         add_more_coins.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
